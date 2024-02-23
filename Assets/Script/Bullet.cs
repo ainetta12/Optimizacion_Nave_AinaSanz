@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-   {
+
 
     [SerializeField] float bulletSpeed = 5;
 
@@ -18,5 +18,6 @@ public class Bullet : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-}
+
+
 }

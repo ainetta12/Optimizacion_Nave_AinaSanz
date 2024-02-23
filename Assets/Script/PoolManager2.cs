@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pool : MonoBehaviour
+public class PoolManager2 : MonoBehaviour
 {
- public static PoolManager Instance;
+ public static PoolManager2 Instance;
 
     [System.Serializable]
 
