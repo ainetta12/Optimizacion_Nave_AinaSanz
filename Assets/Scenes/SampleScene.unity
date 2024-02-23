@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &334819844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 334819845}
+  m_Layer: 0
+  m_Name: SpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &334819845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334819844}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.71467316, y: 0.0413419, z: 1.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 844146291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbaa602cbad083f408f5f2a7878e2cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunPosition: {fileID: 0}
+  gunPosition: {fileID: 1973001745}
   bulletType: 0
   speed: 5
 --- !u!4 &795722133 stripped
@@ -242,6 +273,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aa5611b56695fcd4b97a728620a68d60, type: 3}
   m_PrefabInstance: {fileID: 989724603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &844146290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844146291}
+  - component: {fileID: 844146292}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &844146291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844146290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: -1.4397278, z: 3.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 334819845}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844146292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844146290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fffa43b78e5878743ae3adfc51fbd568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,12 +535,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - parentName: BulletPool
-    prefab: {fileID: 232115480870692276, guid: 0ba6f35858ffcfb4f8267f26e9086723, type: 3}
-    poolSize: 0
+    prefab: {fileID: 5008108786871841374, guid: 5108c38a105c5644aa92d8d636fbb6b0, type: 3}
+    poolSize: 50
     pooledObjects: []
-  - parentName: Pool
-    prefab: {fileID: 232115480870692276, guid: 0ba6f35858ffcfb4f8267f26e9086723, type: 3}
-    poolSize: 0
+  - parentName: EnemyPool
+    prefab: {fileID: 2315517411323204226, guid: 4cef278cc9e24364d87d64938cbbe2cd, type: 3}
+    poolSize: 20
     pooledObjects: []
 --- !u!1 &1973001744
 GameObject:
@@ -505,3 +581,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 989724603}
   - {fileID: 1261367554}
+  - {fileID: 844146291}
